@@ -97,7 +97,7 @@ open class CustomTabBar: UITabBar {
     private var spaceLayoutGuides:[UILayoutGuide] = []
     
     private func reloadViews() {
-        subviews.filter { String(describing: type(of: $0)) == "UITabBarbutton"}.forEach { $0.removeFromSuperview()}
+        subviews.filter { String(describing: type(of: $0)) == "UITabBarButton"}.forEach { $0.removeFromSuperview()}
         buttons.forEach{$0.removeFromSuperview()}
         spaceLayoutGuides.forEach{ self.container.removeLayoutGuide($0)}
         buttons = items?.map { self.button(forItem: $0)} ?? []
@@ -163,6 +163,7 @@ open class CustomTabBar: UITabBar {
         }
         delegate?.tabBar?(self, didSelect: item)
     }
+    
     func select(itemAt index: Int, animated: Bool = false) {
         guard index < buttons.count else {
             return
