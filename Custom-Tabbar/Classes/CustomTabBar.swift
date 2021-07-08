@@ -125,7 +125,7 @@ open class CustomTabBar: UITabBar {
             layoutGuide.trailingAnchor.constraint(equalTo: nextBtn.leadingAnchor).isActive = true
         }
         for layoutGuide in spaceLayoutGuides[1...] {
-            layoutGuide.widthAnchor.constraint(equalTo: spaceLayoutGuides[0].widthAnchor, multiplier: 1.0).isActive = true
+            layoutGuide.widthAnchor.constraint(equalTo: spaceLayoutGuides[0].widthAnchor, multiplier: 1.0).isActive = true;
         }
         layoutIfNeeded()
     }
@@ -137,7 +137,7 @@ open class CustomTabBar: UITabBar {
         if (button.item as? CBTabBarItem)?.tintColor == nil {
             button.tintColor = tintColor
         }
-        button.addTarget(self.action, action: #selector(btnPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(btnPressed), for: .touchUpInside)
         if selectedItem != nil && item === selectedItem {
             button.setSelected(true)
         }
@@ -175,7 +175,7 @@ open class CustomTabBar: UITabBar {
             }
             button.setSelected(false, animationDuration: animated ? animationDuration : 0)
         }
-        selectedButton.setSelected(false, animationDuration: animated ? animationDuration : 0)
+        selectedButton.setSelected(true, animationDuration: animated ? animationDuration : 0)
         if animated {
             UIView.animate(withDuration: animationDuration) {
                 self.container.layoutIfNeeded()
