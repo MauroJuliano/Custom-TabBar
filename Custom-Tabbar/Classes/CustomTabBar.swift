@@ -81,7 +81,7 @@ open class CustomTabBar: UITabBar {
         if #available(iOS 11.0, *){
             super.safeAreaInsetsDidChange()
             csContainerBottom.constant = -safeAreaInsets.bottom
-        } else { }
+        } else {}
     }
     
     open override var items: [UITabBarItem]? {

@@ -50,14 +50,15 @@ open class CBTabBarButton: UIControl {
         var maybeImage: UIImage?
         if _isSelected {
             maybeImage = item?.selectedImage ?? item?.image
-        } else {
+         } else {
             maybeImage = item?.image
-        }
+         }
         guard let image = maybeImage else {
             return nil
         }
         return image.renderingMode == .automatic ? image.withRenderingMode(.alwaysTemplate) : image
     }
+    
     public var item: UITabBarItem? {
         didSet {
             tabImage.image = currentImage
@@ -125,13 +126,13 @@ open class CBTabBarButton: UIControl {
             tabImage.centerYAnchor.constraint(equalTo: tabBg.centerYAnchor).isActive = true
             tabLabel.centerYAnchor.constraint(equalTo: tabBg.centerYAnchor).isActive = true
             csFoldedLBLLeading = tabLabel.leadingAnchor.constraint(equalTo: tabBg.trailingAnchor)
-            csUnFoldedLBLLeading = tabLabel.leadingAnchor.constraint(equalTo: tabBg.trailingAnchor, constant: bgHeight/4.0)
+            csUnFoldedLBLLeading = tabLabel.leadingAnchor.constraint(equalTo: tabBg.leadingAnchor, constant: bgHeight/4.0)
             csFoldedBgTrailing = tabImage.trailingAnchor.constraint(equalTo: tabBg.leadingAnchor, constant: bgHeight/2.0)
             csUnFoldedBgTrailing = tabLabel.trailingAnchor.constraint(equalTo: tabImage.leadingAnchor, constant: -bgHeight/2.0)
         } else {
-            tabImage.trailingAnchor.constraint(equalTo: tabBg.leadingAnchor, constant: bgHeight/2.0).isActive = true
+            tabImage.leadingAnchor.constraint(equalTo: tabBg.leadingAnchor, constant: bgHeight/2.0).isActive = true
             tabImage.centerYAnchor.constraint(equalTo: tabBg.centerYAnchor).isActive = true
-            tabLabel.centerYAnchor.constraint(equalTo: tabBg.centerYAnchor).isActive = true
+            tabLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
             csFoldedLBLLeading = tabLabel.leadingAnchor.constraint(equalTo: tabBg.leadingAnchor)
             csUnFoldedLBLLeading = tabLabel.leadingAnchor.constraint(equalTo: tabBg.trailingAnchor, constant: bgHeight/4.0)
             csFoldedBgTrailing = tabImage.trailingAnchor.constraint(equalTo: tabBg.trailingAnchor, constant: -bgHeight/2.0)
@@ -171,7 +172,7 @@ open class CBTabBarButton: UIControl {
  }
     public func setSelected(_ selected: Bool, animationDuration duration: Double = 0.0){
         _isSelected = selected
-        UIView.transition(with: tabImage, duration: 0.005, options: [.beginFromCurrentState], animations: {
+        UIView.transition(with: tabImage, duration: 0.05, options: [.beginFromCurrentState], animations: {
             self.tabImage.image = self.currentImage
         }, completion: nil)
         if selected {
