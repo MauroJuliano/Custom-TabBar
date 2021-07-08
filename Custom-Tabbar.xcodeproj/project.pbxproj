@@ -33,6 +33,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D49270F2697730F0026A4DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D2B66F7B2696458E0050DEDE /* CustomTabBar.swift */,
+				D2B66F7F269645D70050DEDE /* CBTabBarButton.swift */,
+				D2B66F7D269645C30050DEDE /* CustomTabBarController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		D2B66F66269642D50050DEDE = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +62,9 @@
 		D2B66F72269642D50050DEDE /* Custom-Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				9D49270F2697730F0026A4DA /* Classes */,
 				D2B66F73269642D50050DEDE /* Custom_Tabbar.h */,
 				D2B66F74269642D50050DEDE /* Info.plist */,
-				D2B66F7B2696458E0050DEDE /* CustomTabBar.swift */,
-				D2B66F7D269645C30050DEDE /* CustomTabBarController.swift */,
-				D2B66F7F269645D70050DEDE /* CBTabBarButton.swift */,
 			);
 			path = "Custom-Tabbar";
 			sourceTree = "<group>";
