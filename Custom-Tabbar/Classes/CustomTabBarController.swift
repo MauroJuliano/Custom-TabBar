@@ -18,7 +18,7 @@ open class CustomTabBarController: UITabBarController {
                     shouldSelectOnTabBar = true
                     return
             }
-            guard let tabBar = tabBar as? CustomTabBar, let index = viewControllers?.index(of: newValue) else {
+            guard let tabBar = tabBar as? CustomTabBar, let index = viewControllers?.firstIndex(of: newValue) else {
                 return
             }
             tabBar.select(itemAt: index, animated: false)
@@ -81,7 +81,7 @@ open class CustomTabBarController: UITabBarController {
         updateTabBarFrame()
     }
     open override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        guard let idx = tabBar.items?.index(of: item) else {
+        guard let idx = tabBar.items?.firstIndex(of: item) else {
             return
         }
         if let controller = viewControllers?[idx] {
