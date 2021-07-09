@@ -1,7 +1,7 @@
 # Custom-TabBar
 <h1> Custom TabBar </h1>
+
 ![Alt Text](https://media.giphy.com/media/RVt0JmyjFT7gQxRhzA/giphy.gif)
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
 <h2>Requirements</h2>
 
