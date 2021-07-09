@@ -1,6 +1,6 @@
 # Custom-TabBar
 <h1> Custom TabBar </h1>
-![Alt Text](https://drive.google.com/file/d/1RZqD5V4QLyf3E6EfQecGTiRtU8xxCLGT/view?usp=sharing)
+![Alt Text](https://media.giphy.com/media/RVt0JmyjFT7gQxRhzA/giphy.gif)
 
 <h2>Requirements</h2>
 
@@ -25,5 +25,6 @@ If you need cutom color for each tab set CBTabBarItem class to tab bar items and
 <h3> Obs: </h3>
 This pod was created for study purpose only
 
-License
+<h2>License</h2>
+
 CustomTabbar is available under the MIT license. See the LICENSE file for more info.
